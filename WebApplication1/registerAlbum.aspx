@@ -3,7 +3,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="stylesheet" type="text/css" href="StyleSheet1.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css"/>
+     <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'/>
+    <link rel="stylesheet" type="text/css" href="StyleSheet5.css"/>
     <title>Register album</title>
 </head>
 <body>
@@ -22,40 +25,37 @@
     </g>
 </svg>
     </div>
+    <h1 class="wrapper">
     <form id="form1" runat="server">
      
-            
-            <p>Choose artist</p>
-          <asp:DropDownList ID = "artists" runat="server" Height="30px" Width="300px" BackColor="#FFFFCC">
+            <h1>Register album</h1>
+            <i class="fa fa-address-card-o" style="font-size:30px"></i>
+          <asp:DropDownList ID = "artists" runat="server" CssClass="textbox">
            </asp:DropDownList>
-            
-            
-            <p>Album label</p>
-            <asp:TextBox ID="albumName" Text="" runat="server" BackColor="#FFFFCC" Height="30px" Width="300px" />
-            
-            <p>Number of tracks</p>
-            <asp:TextBox ID="numberOfTracks" Text="" runat="server" BackColor="#FFFFCC" Height="30px" Width="300px" /> 
-           
-            
-            <p>Release Year</p>
-            <asp:TextBox ID="releaseYear" runat="server" BackColor="#FFFFCC" Height="30px" Width="300px" />
+           <br />
+            <i class="fas fa-record-vinyl" style="font-size:30px"></i>
+            <asp:TextBox ID="albumLabel" Text="Album label" runat="server" CssClass="textbox"/>
+            <br />
+            <i class="fas fa-sort-numeric-up-alt" style="font-size:30px"></i>
+            <asp:TextBox ID="numberOfTracks" Text="Number of tracks" runat="server" CssClass="textbox"/>   
+           <br />
+                <i class="fa fa-calendar-alt" style="font-size:30px"></i>
+            <asp:TextBox ID="releaseYear" Text="Release year" runat="server" CssClass="textbox"/>
             <br />
             <br />
-            <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" Height="237px" Width="418px" BackColor="#FFFFCC" BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#663399" ShowGridLines="True">
-                <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
+            <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged" CssClass="calendar" BackColor="Black" ForeColor="White">
+                <DayHeaderStyle BackColor="DarkGray" Font-Bold="True" Height="1px" />
                 <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
                 <OtherMonthDayStyle ForeColor="#CC9966" />
                 <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
                 <SelectorStyle BackColor="#FFCC66" />
-                <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" ForeColor="#FFFFCC" />
+                <TitleStyle BackColor="#900C3F" Font-Bold="True" Font-Size="9pt" ForeColor="#FFFFCC" />
                 <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
             </asp:Calendar>
            
-           
             <br />
-            <br />
-            <asp:Button ID="registerButton" Text="REGISTER" runat="server" OnClick="RegisterEventMethod" BackColor="#FFFFCC" Font-Bold="True" Font-Italic="False" Font-Overline="False" Height="52px" style="margin-left: 0px; margin-right: 0px;" Width="155px" ForeColor="#663399" />
-       
+            <asp:Button ID="registerButton" Text="Register album" runat="server" OnClick="RegisterEventMethod" CssClass="registerButton" />       
     </form>
+     </div>
 </body>
 </html>
